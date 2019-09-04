@@ -3,7 +3,7 @@ NAME := dev-golang
 .PHONY: dev
 dev: ## start a dev docker
 	@echo "start dev!"
-	@docker run -it --rm --name $(NAME) -v $(shell pwd):/app -w /app $(shell docker build -q .)
+	@docker run -it --rm --name $(NAME) -v $(shell pwd):/app -w /app $(shell docker build -q .) /app/start
 
 .PHONY: login
 login: ## login dev docker
