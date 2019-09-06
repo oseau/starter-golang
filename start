@@ -8,6 +8,7 @@ exit_script() {
     kill -- -$$ # Sends SIGTERM to child/sub processes
 }
 trap exit_script SIGINT
+go env -w GOPROXY=https://goproxy.io,direct
 DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 PIDFILE="watchman.pid"
 sh -c 'echo $PPID' > ${DIR}/${PIDFILE}
