@@ -5,4 +5,4 @@ echo -e "\
 ========== Start ==========
 ===========================
 \033[0m"
-go test -v -cover -tags test
+go test ./... -v -cover

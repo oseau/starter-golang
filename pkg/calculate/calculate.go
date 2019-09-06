@@ -1,4 +1,4 @@
-package main
+package calculate
 
 // Calculate returns x + 2.
 func Calculate(x int) (result int) {
